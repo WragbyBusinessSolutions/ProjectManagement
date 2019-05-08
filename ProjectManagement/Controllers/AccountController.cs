@@ -66,6 +66,13 @@ namespace ProjectManagement.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+
+                    if (returnUrl == null)
+                    {
+                        returnUrl = Url.Action(nameof(DashboardController.Index), "Dashboard");
+
+                    }
+
                     return RedirectToLocal(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
@@ -282,6 +289,12 @@ namespace ProjectManagement.Controllers
             if (result.Succeeded)
             {
                 _logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
+                if (returnUrl == null)
+                {
+                    returnUrl = Url.Action(nameof(DashboardController.Index), "Dashboard");
+
+                }
+
                 return RedirectToLocal(returnUrl);
             }
             if (result.IsLockedOut)
@@ -320,6 +333,14 @@ namespace ProjectManagement.Controllers
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         _logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
+
+
+                        if (returnUrl == null)
+                        {
+                            returnUrl = Url.Action(nameof(DashboardController.Index), "Dashboard");
+
+                        }
+
                         return RedirectToLocal(returnUrl);
                     }
                 }
