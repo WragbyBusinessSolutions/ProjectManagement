@@ -14,7 +14,6 @@
     <!-- ============================================================== -->
     @await Html.PartialAsync("_LayoutProjectAside")
 
-
     <article class="content dashboard-page">
         <section class="section">
             <div class="row sameheight-container">
@@ -32,7 +31,7 @@
                                             <i class="fa fa-rocket"></i>
                                         </div>
                                         <div class="stat">
-                                            <a asp-area="" asp-controller="DashboardInternal" asp-action="Index">
+                                            <a asp-controller="Dashboard" asp-action="Project">
                                                 Internal Projects
                                             </a>
                                         </div>
@@ -42,7 +41,7 @@
                                             <i class="fa fa-line-chart"></i>
                                         </div>
                                         <div class="stat">
-                                            <a asp-area="" asp-controller="DashboardExternal" asp-action="Index">
+                                            <a  asp-controller="Dashboard" asp-action="ExternalProjects">
                                                 External Projects
                                             </a>
                                         </div>

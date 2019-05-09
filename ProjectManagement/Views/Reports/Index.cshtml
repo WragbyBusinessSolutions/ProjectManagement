@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutProject.cshtml";
+}
+
+
+
+@await Html.PartialAsync("_LayoutProjectHeader")
+<!-- ============================================================== -->
+<!-- End Topbar header -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+@await Html.PartialAsync("_LayoutProjectAside")
+
+
+
+
+<article class="content items-list-page">
+    <section class="section">
+        <div class="row sameheight-container">
+            <div class="col-md-6">
+
+                <div class="card card-block sameheight-item">
+                    <div class="title-block">
+                        <h3 class="title">  Reports Category  </h3>
+                    </div>
+                    <form role="form">
+                        <fieldset class="form-group">
+                            <label class="control-label" for="formGroupExampleInput"></label>
+                            <a asp-area="" asp-controller="Reports" asp-action="ProjectRevenue">
+                                <i class="fa fa-briefcase"></i> Project Revenue
+                            </a>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <label class="control-label" for="formGroupExampleInput"></label>
+                            <a asp-area="" asp-controller="Reports" asp-action="ProjectSegmentation">
+                                <i class="fa fa-briefcase"  ></i> Project Segmentation
+                            </a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</article>

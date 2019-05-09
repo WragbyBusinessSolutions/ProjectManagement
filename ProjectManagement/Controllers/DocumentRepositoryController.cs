@@ -6,19 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProjectManagement.Controllers
 {
-    public class DashboardController : Controller
+    public class DocumentRepositoryController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Project()
-        {
-            return View();
-        }
-
-        public IActionResult ExternalProjects()
+        public IActionResult DocumentLibrary()
         {
             return View();
         }

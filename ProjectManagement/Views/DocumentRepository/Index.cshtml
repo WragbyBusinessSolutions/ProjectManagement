@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutProject.cshtml";
+}
+
+
+
+    @await Html.PartialAsync("_LayoutProjectHeader")
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    @await Html.PartialAsync("_LayoutProjectAside")
+
+
+   <article class="content cards-page">
+    <div class="title-block">
+        <h3 class="title"> Document Repository </h3>
+    </div>
+    <section class="section">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card card-danger">
+                    <div class="card-header">
+                        <div class="header-block">
+                            <p class="title"> Upstream Unit </p>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                    </div>
+                    <a asp-area="" asp-controller="DocumentRepository" asp-action="DocumentLibrary" class="btn btn-primary btn-sm rounded-s"> View Repository </a>
+                </div>
+            </div>
+            <!-- /.col-xl-4 -->
+            <div class="col-xl-6">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <div class="header-block">
+                            <p class="title"> Downstream Unit </p>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                    </div>
+                    <a asp-area="" asp-controller="DocumentRepository" asp-action="DocumentLibrary" class="btn btn-primary btn-sm rounded-s"> View Repository </a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="col-xl-6">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <div class="header-block">
+                            <p class="title"> SHE Unit </p>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                    </div>
+                    <a asp-area="" asp-controller="DocumentRepository" asp-action="DocumentLibrary" class="btn btn-primary btn-sm rounded-s"> View Repository </a>
+                </div>
+            </div>
+            <!-- /.col-xl-4 -->
+            <div class="col-xl-6">
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <div class="header-block">
+                            <p class="title"> Procurement Unit </p>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                    </div>
+                    <a asp-area="" asp-controller="DocumentRepository" asp-action="DocumentLibrary" class="btn btn-primary btn-sm rounded-s"> View Repository </a>
+                </div>
+            </div>
+        </div>
+            <!-- /.col-xl-4 -->
+        <!-- /.row -->
+    </section>
+    
+</article>

@@ -4,21 +4,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 namespace ProjectManagement.Controllers
 {
-    public class DashboardController : Controller
+    public class ProjectController : Controller
     {
+        // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Project()
+        public IActionResult AddProject()
         {
             return View();
         }
 
-        public IActionResult ExternalProjects()
+        public IActionResult ProjectDetails()
         {
             return View();
         }
