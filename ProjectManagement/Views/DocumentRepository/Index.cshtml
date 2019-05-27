@@ -1,85 +1,105 @@
 ﻿@{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_LayoutProject.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
-    @await Html.PartialAsync("_LayoutProjectHeader")
-    <!-- ============================================================== -->
-    <!-- End Topbar header -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    @await Html.PartialAsync("_LayoutProjectAside")
-
-
-   <article class="content cards-page">
-    <div class="title-block">
-        <h3 class="title"> Document Repository </h3>
-    </div>
-    <section class="section">
-        <div class="row">
-            <div class="col-xl-6">
-                <div class="card card-danger">
-                    <div class="card-header">
-                        <div class="header-block">
-                            <p class="title"> Upstream Unit </p>
-                        </div>
-                    </div>
-                    <div class="card-block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                    </div>
-                    <a asp-area="" asp-controller="DocumentRepository" asp-action="DocumentLibrary" class="btn btn-primary btn-sm rounded-s"> View Repository </a>
-                </div>
+ <div class="container-fluid">
+        <!-- Title -->
+        <div class="row heading-bg">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h5 class="txt-dark">Document Repository</h5>
             </div>
-            <!-- /.col-xl-4 -->
-            <div class="col-xl-6">
-                <div class="card card-primary">
-                    <div class="card-header">
-                        <div class="header-block">
-                            <p class="title"> Downstream Unit </p>
-                        </div>
-                    </div>
-                    <div class="card-block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                    </div>
-                    <a asp-area="" asp-controller="DocumentRepository" asp-action="DocumentLibrary" class="btn btn-primary btn-sm rounded-s"> View Repository </a>
-                </div>
+            <!-- Breadcrumb -->
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="#"><span>ui-elements</span></a></li>
+                    <li class="active"><span>sweetalert</span></li>
+                </ol>
             </div>
-            <!-- /.row -->
-
-            <div class="col-xl-6">
-                <div class="card card-info">
-                    <div class="card-header">
-                        <div class="header-block">
-                            <p class="title"> SHE Unit </p>
-                        </div>
-                    </div>
-                    <div class="card-block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                    </div>
-                    <a asp-area="" asp-controller="DocumentRepository" asp-action="DocumentLibrary" class="btn btn-primary btn-sm rounded-s"> View Repository </a>
-                </div>
-            </div>
-            <!-- /.col-xl-4 -->
-            <div class="col-xl-6">
-                <div class="card card-warning">
-                    <div class="card-header">
-                        <div class="header-block">
-                            <p class="title"> Procurement Unit </p>
-                        </div>
-                    </div>
-                    <div class="card-block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                    </div>
-                    <a asp-area="" asp-controller="DocumentRepository" asp-action="DocumentLibrary" class="btn btn-primary btn-sm rounded-s"> View Repository </a>
-                </div>
-            </div>
+            <!-- /Breadcrumb -->
         </div>
-            <!-- /.col-xl-4 -->
-        <!-- /.row -->
-    </section>
-    
-</article>
+        <!-- /Title -->
+        <!-- Row -->
+        <div class="row">
+           
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="panel panel-default card-view custom-card-view">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h6 class="panel-title txt-dark">Upstream Unit</h6>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-wrapper collapse in">
+                        <div class="panel-body">
+                            <button class="btn btn-sm btn-success custom-button">View Repository</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="panel panel-default card-view custom-card-view">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h6 class="panel-title txt-dark">Downstream Unit</h6>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-wrapper collapse in">
+                        <div class="panel-body">
+                            <button class="btn btn-sm btn-success custom-button">View Repository</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+     
+
+         <!-- Row -->
+         <div class="row">
+             <div class="col-lg-3 col-md-6 col-xs-12">
+                 <div class="panel panel-default card-view custom-card-view">
+                     <div class="panel-heading">
+                         <div class="pull-left">
+                             <h6 class="panel-title txt-dark">SHE Unit</h6>
+                         </div>
+                         <div class="clearfix"></div>
+                     </div>
+                     <div class="panel-wrapper collapse in">
+                         <div class="panel-body">
+                             <button class="btn btn-sm btn-success custom-button">View Repository</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         
+
+         <div class="col-lg-3 col-md-6 col-xs-12">
+             <div class="panel panel-default card-view custom-card-view">
+                 <div class="panel-heading">
+                     <div class="pull-left">
+                         <h6 class="panel-title txt-dark">Procurement Unit</h6>
+                     </div>
+                     <div class="clearfix"></div>
+                 </div>
+                 <div class="panel-wrapper collapse in">
+                     <div class="panel-body">
+                         <button class="btn btn-sm btn-success custom-button">View Repository</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+            
+  </div>
+        <!-- /Row -->
+
+   
+
+ 
+
+<!-- /Main Content -->
+	
+    @await Html.PartialAsync("_LayoutFooter")

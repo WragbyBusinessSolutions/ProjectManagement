@@ -1,18 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_LayoutProject.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 
-@await Html.PartialAsync("_LayoutProjectHeader")
+@await Html.PartialAsync("_LayoutHeader")
 <!-- ============================================================== -->
 <!-- End Topbar header -->
 <!-- ============================================================== -->
 <!-- ============================================================== -->
 <!-- Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
-@await Html.PartialAsync("_LayoutProjectAside")
+@await Html.PartialAsync("_ResellerLayoutAside")
 
 <article class="content items-list-page">
     <div class="container-fluid">
@@ -38,3 +38,4 @@
         </div>
     </div>
 </article>
+@await Html.PartialAsync("_LayoutFooter")
