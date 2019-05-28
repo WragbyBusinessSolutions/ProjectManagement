@@ -15,5 +15,16 @@ namespace ProjectManagement.Controllers
         {
             return View();
         }
+
+        public IActionResult FinancialBased()
+        {
+            return View();
+        }
+
+        public IActionResult ProjectStatus()
+        {
+            return View();
+        }
+
     }
 }

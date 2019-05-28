@@ -13,6 +13,11 @@ namespace ProjectManagement.Controllers
             return View();
         }
 
+        public IActionResult Index1()
+        {
+            return View();
+        }
+
         public IActionResult Project()
         {
             return View();

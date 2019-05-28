@@ -16,35 +16,41 @@
 
 
 
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
 
-<article class="content items-list-page">
-    <section class="section">
-        <div class="row sameheight-container">
-            <div class="col-md-6">
+        <div class="panel panel-default card-view">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">Project Category</h6>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body row">
+                    <div class="">
+                        <div class="pl-15 pr-15 mb-15">
+                            <div class="pull-left">
+                                <i class="zmdi zmdi-collection-folder-image inline-block mr-10 font-16"></i>
+                                <span class="inline-block txt-dark"><a asp-area="" asp-controller="Reports" asp-action="ProjectRevenue">Project Revenue</a></span>
+                            </div>
 
-                <div class="card card-block sameheight-item">
-                    <div class="title-block">
-                        <h3 class="title">  Reports Category  </h3>
+                            <div class="clearfix"></div>
+                        </div>
+                        <hr class="light-grey-hr mt-0 mb-25" />
+                        <div class="pl-15 pr-15 mb-15">
+                            <div class="pull-left">
+                                <i class="zmdi zmdi-collection-folder-image inline-block mr-10 font-16"></i>
+                                <span class="inline-block txt-dark"><a asp-area="" asp-controller="Reports" asp-action="ProjectSegmentation">Project Segmentation</a></span>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        </div>
                     </div>
-                    <form role="form">
-                        <fieldset class="form-group">
-                            <label class="control-label" for="formGroupExampleInput"></label>
-                            <a asp-area="" asp-controller="Reports" asp-action="ProjectRevenue">
-                                <i class="fa fa-briefcase"></i> Project Revenue
-                            </a>
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                            <label class="control-label" for="formGroupExampleInput"></label>
-                            <a asp-area="" asp-controller="Reports" asp-action="ProjectSegmentation">
-                                <i class="fa fa-briefcase"  ></i> Project Segmentation
-                            </a>
-                        </fieldset>
-                    </form>
                 </div>
             </div>
-
         </div>
-    </section>
-</article>
-@await Html.PartialAsync("_LayoutFooter")
+    </div>
+
+                        @await Html.PartialAsync("_LayoutFooter")
