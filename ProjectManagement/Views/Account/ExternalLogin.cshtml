@@ -1,9 +1,11 @@
 ﻿@model ExternalLoginViewModel
+
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Log in";
+    Layout = "_AuthLayout";
 }
 
-<h2>@ViewData["Title"]</h2>
+@*<h2>@ViewData["Title"]</h2>
 <h4>Associate your @ViewData["LoginProvider"] account.</h4>
 <hr />
 
@@ -27,6 +29,61 @@
     </div>
 </div>
 
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}*@
+
+
+
+<div class="form-body">
+    <div class="row">
+        <div class="img-holder">
+            <div class="bg"></div>
+            <div class="info-holder">
+                <h3>Get more things done with Project Management.</h3>
+                <p>Access to the most powerful tool in the entire sales industry.</p>
+                <img src="~/images/graphic5.svg" alt="">
+            </div>
+        </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <div class="website-logo-inside" style="text-align: center;">
+                        <a asp-action="login" asp-controller="account">
+                            @*<div class="logo">
+                    <img class="logo-size" src="~/images/logo-light.svg" alt="">
+                </div>*@
+                            <div style="text-align: center; color: white">
+                                <h1> <span> Project Management </span> </h1>
+                            </div>
+                        </a>
+                    </div>
+                    <h2>@ViewData["Title"]</h2>
+                    <h4>Associate your @ViewData["LoginProvider"] account.</h4>
+                    <p class="text-info">
+                        You've successfully authenticated with <strong>@ViewData["LoginProvider"]</strong>.
+                        Please enter an email address for this site below and click the Register button to finish
+                        logging in.
+                    </p>
+                    <div style="margin:auto; display: block;" class="page-links">
+                        <a asp-action="Login" class="active">Login</a> @*<a asp-controller="Employee" asp-action="Login">Employee Login</a>*@
+                    </div>
+                    <form asp-action="ExternalLoginConfirmation" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" style="margin:auto; display: block;" class="ibtn">Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }
