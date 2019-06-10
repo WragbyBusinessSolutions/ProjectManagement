@@ -5,12 +5,12 @@
 @inject SignInManager<ApplicationUser> SignInManager
 
 @{
-    ViewData["Title"] = "Login";
-    Layout = "~/Views/Shared/_LayoutProjectLogin.cshtml";
+    ViewData["Title"] = "Log in";
+    Layout = "_AuthLayout";
 }
 
 
-<div class="auth">
+@*<div class="auth">
     <div class="auth-container">
         <div class="card">
             <header class="auth-header">
@@ -26,7 +26,7 @@
                     var loginProviders = (await SignInManager.GetExternalAuthenticationSchemesAsync()).ToList();
                     if (loginProviders.Count == 0)
                     {
-                        
+
                     }
                     else
                     {
@@ -37,7 +37,7 @@
                         {
 
 
-                          
+
                             <div class="form-group">
                                 <button type="submit" class="btn btn-block btn-primary" name="provider" value="@provider.Name"  title="Log in using your organization email">Login with Organization Email</button>
                             </div>
@@ -48,13 +48,98 @@
                     </p>
                 </div>
 
-              
+
             </form>
                     }
                 }
             </div>
         </div>
      </div>
+    </div>*@
+
+
+<div class="form-body">
+    <div class="row">
+        <div class="img-holder">
+            <div class="bg"></div>
+            <div class="info-holder">
+                <h3>Get more things done with Project Management.</h3>
+                <p>Access to the most powerful tool in the entire sales industry.</p>
+                <img src="~/images/graphic5.svg" alt="">
+            </div>
+        </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <div class="website-logo-inside" style="text-align: center;">
+                        <a asp-action="login" asp-controller="account">
+                            @*<div class="logo">
+                                    <img class="logo-size" src="~/images/logo-light.svg" alt="">
+                                </div>*@
+                            <div style="text-align: center; color: white">
+                                <h1> <span> Project Management </span> </h1>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="margin:auto; display: block;" class="page-links">
+                        <a asp-action="Login" class="active">Login</a> <a asp-controller="Employee" asp-action="Login">Employee Login</a>
+                    </div>
+                    <form method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <input asp-for="Email" class="form-control" placeholder="Email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Password" autocomplete="off" class="form-control" placeholder="Password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-button">
+                            <button type="submit" style="margin:auto; display: block;" class="ibtn">Log in</button>
+                        </div>
+
+                    </form>
+
+                    <div style="text-align: center; color: white">
+                        <span> Or </span>
+                    </div>
+                    @{
+                        var loginProviders = (await SignInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+                        if (loginProviders.Count == 0)
+                        {
+                            <div>
+
+                                <p>
+                                    There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                                    for details on setting up this ASP.NET application to support logging in via external services.
+                                </p>
+                            </div>
+                        }
+                        else
+                        {
+
+                            <form asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                                <div class="form-button">
+
+                                    <p>
+                                        @foreach (var provider in loginProviders)
+                                        {
+
+                                            <button type="submit" style="margin:auto; display: block;" class="ibtn" name="provider" value="@provider.Name" title="Log with Organization Email">Log with Organization Email</button>
+                                        }
+                                    </p>
+                                </div>
+                            </form>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
 
 
