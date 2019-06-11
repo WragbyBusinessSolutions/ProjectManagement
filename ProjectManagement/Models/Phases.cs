@@ -10,7 +10,7 @@ namespace ProjectManagement.Models
     {
         [Key]
         public string Id { get; set; }
-        public virtual Methodologies Methoology { get; set; }
+        public virtual Methodologies Methodology { get; set; }
         public string PhaseName { get; set; }
     }
 }

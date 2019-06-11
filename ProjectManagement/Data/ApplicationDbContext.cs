@@ -12,6 +12,13 @@ namespace ProjectManagement.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
         }
+        public DbSet<Methodologies> Methodologies { get; set; }
+        public DbSet<Phases> Phases { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectPhase> ProjectPhases { get; set; }
+        public DbSet<Task> Tasks { get; set; }
+
     }
 }
