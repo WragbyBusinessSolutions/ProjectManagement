@@ -19,6 +19,7 @@ namespace ProjectManagement.Models
         public Divisions Division { get; set; }
         public Categories Category { get; set; }
         public Status Status { get; set; }
+        public bool IsApproved { get; set; }
         public virtual ProjectPhase Phase { get; set; }
     }
 }
