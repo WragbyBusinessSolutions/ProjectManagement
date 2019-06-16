@@ -331,6 +331,14 @@ namespace ProjectManagement.Controllers
                     result = await _userManager.AddLoginAsync(user, info);
                     if (result.Succeeded)
                     {
+                        var identifier = info.Principal.FindFirstValue(Startup.ObjectIdentifierType);
+
+
+                        await _userManager.AddClaimsAsync(user, info.Principal.Claims);
+
+                        await _userManager.AddClaimAsync(user, new Claim("identifier", identifier));
+
+
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         _logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
 

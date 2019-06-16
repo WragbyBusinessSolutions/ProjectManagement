@@ -21,6 +21,7 @@ using ProjectManagement.Services;
 using ProjectManagement.MailServices;
 using ProjectManagement.Extensions;
 using ProjectManagement.Models;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
 namespace ProjectManagement
 {
@@ -57,8 +58,10 @@ namespace ProjectManagement
             services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
 
-            services.AddAuthentication(sharedOptions =>
+            services.AddAuthentication(options =>
             {
+                options.DefaultScheme = OpenIdConnectDefaults.AuthenticationScheme;
+               
             })
                 .AddAzureAd(options => Configuration.Bind("AzureAd", options))
                 .AddCookie(options =>
@@ -84,6 +87,60 @@ namespace ProjectManagement
                 options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                 options.SlidingExpiration = true;
             });
+
+
+
+            services.AddAuthorization(options =>
+            {
+                
+
+                options.AddPolicy("Admin", policy =>
+
+                {
+                   
+                    policy.RequireClaim("groups", Configuration.GetValue<string>("AzureSecurityGroup:AdminId"));
+
+                });
+
+
+
+
+                options.AddPolicy("PM", policyBuilder =>
+
+                {
+                    policyBuilder.RequireClaim("groups", Configuration.GetValue<string>("AzureSecurityGroup:PMId"));
+
+
+                });
+
+
+                options.AddPolicy("Manager", policyBuilder =>
+                {
+                    policyBuilder.RequireClaim("groups", Configuration.GetValue<string>("AzureSecurityGroup:ManagerId"));
+
+                });
+
+
+
+                options.AddPolicy("AssDir", policyBuilder =>
+
+                {
+                    policyBuilder.RequireClaim("groups", Configuration.GetValue<string>("AzureSecurityGroup:AssDirId"));
+
+                });
+
+
+                options.AddPolicy("DepDir", policyBuilder =>
+                {
+                    policyBuilder.RequireClaim("groups", Configuration.GetValue<string>("AzureSecurityGroup:DepDirID"));
+
+                });
+            });
+
+
+
+
+
             services.AddTransient<MailServices.IEmailSender, EmailSender>();
             services.AddSingleton<IGraphAuthProvider, GraphAuthProvider>();
             services.AddTransient<IGraphSdkHelper, GraphSdkHelper>();
