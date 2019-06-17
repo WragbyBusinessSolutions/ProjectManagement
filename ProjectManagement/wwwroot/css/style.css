@@ -2651,10 +2651,10 @@ a#toggle_mobile_nav {
   .wrapper.theme-5-active .fixed-sidebar-left .side-nav {
     background: #fff; }
   .wrapper.theme-6-active .navbar.navbar-inverse.navbar-fixed-top {
-    background: #24333e;
-    border-bottom: 1px solid #24333e; }
+    background: #fff;
+    border-bottom: 1px solid #fff; }
     .wrapper.theme-6-active .navbar.navbar-inverse.navbar-fixed-top .mobile-only-brand {
-      background: #24333e; }
+      background: #fff; }
     .wrapper.theme-6-active .navbar.navbar-inverse.navbar-fixed-top .nav-header .logo-wrap .brand-text {
       color: #fff; }
     .wrapper.theme-6-active .navbar.navbar-inverse.navbar-fixed-top .nav > li > a:active, .wrapper.theme-6-active .navbar.navbar-inverse.navbar-fixed-top .nav > li > a:hover, .wrapper.theme-6-active .navbar.navbar-inverse.navbar-fixed-top .nav > li > a:focus {
@@ -2662,9 +2662,10 @@ a#toggle_mobile_nav {
   .wrapper.theme-6-active .fixed-sidebar-left {
     z-index: 1030; }
     .wrapper.theme-6-active .fixed-sidebar-left .side-nav {
-      background: #2a3e4c; }
+        background: forestgreen;
+    }
   .wrapper.theme-1-active .fixed-sidebar-left, .wrapper.theme-3-active .fixed-sidebar-left, .wrapper.theme-6-active .fixed-sidebar-left {
-    border-right: 1px solid #2a3e4c; }
+    border-right: 1px solid green; }
     .wrapper.theme-1-active .fixed-sidebar-left .side-nav > li > a, .wrapper.theme-3-active .fixed-sidebar-left .side-nav > li > a, .wrapper.theme-6-active .fixed-sidebar-left .side-nav > li > a {
       color: #fff; }
       .wrapper.theme-1-active .fixed-sidebar-left .side-nav > li > a:hover, .wrapper.theme-1-active .fixed-sidebar-left .side-nav > li > a:focus, .wrapper.theme-1-active .fixed-sidebar-left .side-nav > li > a:active, .wrapper.theme-3-active .fixed-sidebar-left .side-nav > li > a:hover, .wrapper.theme-3-active .fixed-sidebar-left .side-nav > li > a:focus, .wrapper.theme-3-active .fixed-sidebar-left .side-nav > li > a:active, .wrapper.theme-6-active .fixed-sidebar-left .side-nav > li > a:hover, .wrapper.theme-6-active .fixed-sidebar-left .side-nav > li > a:focus, .wrapper.theme-6-active .fixed-sidebar-left .side-nav > li > a:active {

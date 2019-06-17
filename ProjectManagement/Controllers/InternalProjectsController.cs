@@ -25,6 +25,13 @@ namespace ProjectManagement.Controllers
         {
             return View();
         }
+        public IActionResult InternalProjects()
+        {
+            return View();
+        }
+        public IActionResult ExternalProjects()
+        {
+            return View();
+        }
     }
 }
-//62290

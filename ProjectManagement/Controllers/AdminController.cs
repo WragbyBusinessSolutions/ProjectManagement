@@ -6,24 +6,28 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProjectManagement.Controllers
 {
-    public class DashboardController : Controller
+    public class AdminController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Docs()
         {
             return View();
         }
 
-        public IActionResult Index1()
+        public IActionResult Projects()
         {
             return View();
         }
 
-        public IActionResult Project()
+        public IActionResult Report()
         {
             return View();
         }
 
         public IActionResult ExternalProjects()
+        {
+            return View();
+        }
+        public IActionResult InternalProjects()
         {
             return View();
         }

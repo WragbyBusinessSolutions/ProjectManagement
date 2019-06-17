@@ -69,7 +69,7 @@ namespace ProjectManagement.Controllers
 
                     if (returnUrl == null)
                     {
-                        returnUrl = Url.Action(nameof(DashboardController.Index), "Dashboard");
+                        returnUrl = Url.Action(nameof(HomeController.Index), "Home");
 
                     }
 
@@ -291,7 +291,7 @@ namespace ProjectManagement.Controllers
                 _logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
                 if (returnUrl == null)
                 {
-                    returnUrl = Url.Action(nameof(DashboardController.Index), "Dashboard");
+                    returnUrl = Url.Action(nameof(HomeController.Index), "Home");
 
                 }
 
@@ -345,7 +345,7 @@ namespace ProjectManagement.Controllers
 
                         if (returnUrl == null)
                         {
-                            returnUrl = Url.Action(nameof(DashboardController.Index), "Dashboard");
+                            returnUrl = Url.Action(nameof(HomeController.Index), "Home");
 
                         }
 
