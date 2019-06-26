@@ -24,6 +24,9 @@ namespace ProjectManagement.Controllers
         public IActionResult Projects()
         {
             return View();
+        } public IActionResult ProjectDetails()
+        {
+            return View();
         }
          public IActionResult AddInternalProject()
         {
