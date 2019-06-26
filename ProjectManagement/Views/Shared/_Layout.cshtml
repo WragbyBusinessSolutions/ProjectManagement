@@ -51,35 +51,8 @@
 <body>
 
 
-    @*<div class="container">
-            <partial name="_CookieConsentPartial" />
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>*@
-
-    <!-- Preloader -->
-    <div class="preloader-it">
-        <div class="la-anim-1"></div>
-    </div>
-    <!-- /Preloader -->
-    <div class="wrapper pimary-color-green open-setting-panel theme-6-active">
-
-        <div class="page-wrapper">
-            <div class="container-fluid pt-25">
-                @await Html.PartialAsync("_LayoutHeader")
 
 
-                @await Html.PartialAsync("_ResellerLayoutAside")
-
-                @RenderBody()
-
-                @await Html.PartialAsync("_LayoutFooter")
-            </div>
-        </div>
-    </div>
-
-    @RenderSection("Scripts", required: false)
 
 
     <environment include="Development">
@@ -119,6 +92,7 @@
     <script src="~/js/Chart.min.js"></script>
     <script src="~/js/raphael.min.js"></script>
     <script src="~/js/morris.min.js"></script>
+    <script src="~/js/morris.min.js"></script>
     <script src="~/js/jquery.toast.min.js"></script>
     <script src="~/js/switchery.min.js"></script>
     <script src="~/js/init.js"></script>
@@ -135,5 +109,34 @@
     <script src="~/js/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="~/js/pdfmake/build/pdfmake.min.js"></script>
     <script src="~/js/pdfmake/build/vfs_fonts.js"></script>
+
+
+
+
+
+    <!-- Preloader -->
+    <div class="preloader-it">
+        <div class="la-anim-1"></div>
+    </div>
+    <!-- /Preloader -->
+    <div class="wrapper pimary-color-green open-setting-panel theme-6-active">
+
+        <div class="page-wrapper">
+            <div class="container-fluid pt-25">
+                @await Html.PartialAsync("_LayoutHeader")
+
+
+                @await Html.PartialAsync("_ResellerLayoutAside")
+
+                @RenderBody()
+
+                @await Html.PartialAsync("_LayoutFooter")
+
+            </div>
+        </div>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+
 </body>
 </html>
