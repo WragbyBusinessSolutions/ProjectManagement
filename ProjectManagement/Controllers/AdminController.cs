@@ -62,10 +62,5 @@ namespace ProjectManagement.Controllers
         {
             return View();
         }
-
-        public IActionResult ViewDetails()
-        {
-            return View();
-        }
     }
 }
