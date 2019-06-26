@@ -35,5 +35,9 @@ namespace ProjectManagement.Controllers
         {
             return View();
         }
+        public IActionResult Methodology()
+        {
+            return View();
+        }
     }
 }
