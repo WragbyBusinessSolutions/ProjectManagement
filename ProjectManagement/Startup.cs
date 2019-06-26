@@ -66,13 +66,13 @@ namespace ProjectManagement
                 .AddAzureAd(options => Configuration.Bind("AzureAd", options))
                 .AddCookie(options =>
                 {
-                    options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                     options.SlidingExpiration = true;
 
 
                 }).
                   Services.AddSession(
-                             options => options.IdleTimeout = TimeSpan.FromMinutes(10)
+                             options => options.IdleTimeout = TimeSpan.FromMinutes(30)
                    );
 
 

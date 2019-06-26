@@ -4,682 +4,497 @@
 }
 
 
-
-@await Html.PartialAsync("_LayoutHeader")
-<!-- ============================================================== -->
-<!-- End Topbar header -->
-<!-- ============================================================== -->
-<!-- ============================================================== -->
-<!-- Left Sidebar - style you can find in sidebar.scss  -->
-<!-- ============================================================== -->
-@await Html.PartialAsync("_ResellerLayoutAside")
-
-
-
-
-
-
-<article class="content items-list-page">
-    <div class="title-search-block">
-        <div class="title-block">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="title">
-                        Project Revenue
-                        <a href="item-editor.html" class="btn btn-primary btn-sm rounded-s"> Add New </a>
-                        <!--
-                        -->
-                        <div class="action dropdown">
-                            <button class="btn  btn-sm rounded-s btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More actions... </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fa fa-pencil-square-o icon"></i>Mark as a draft
-                                </a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#confirm-modal">
-                                    <i class="fa fa-close icon"></i>Delete
-                                </a>
-                            </div>
+<!-- Row -->
+<div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="panel panel-default card-view">
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body sm-data-box-1">
+                    <span class="uppercase-font weight-500 font-14 block text-center txt-dark">customer satisfaction</span>
+                    <div class="cus-sat-stat weight-500 txt-success text-center mt-5">
+                        <span class="counter-anim">93.13</span><span>%</span>
+                    </div>
+                    <div class="progress-anim mt-20">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success wow animated progress-animated" role="progressbar" aria-valuenow="93.12" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                    </h3>
-                    <p class="title-description"> List of sample items - e.g. books, movies, events, etc... </p>
+                    </div>
+                    <ul class="flex-stat mt-5">
+                        <li>
+                            <span class="block">Previous</span>
+                            <span class="block txt-dark weight-500 font-15">79.82</span>
+                        </li>
+                        <li>
+                            <span class="block">% Change</span>
+                            <span class="block txt-dark weight-500 font-15">+14.29</span>
+                        </li>
+                        <li>
+                            <span class="block">Trend</span>
+                            <span class="block">
+                                <i class="zmdi zmdi-trending-up txt-success font-20"></i>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="items-search">
-            <form class="form-inline">
-                <div class="input-group">
-                    <input type="text" class="form-control boxed rounded-s" placeholder="Search for...">
-                    <span class="input-group-btn">
-                        <button class="btn btn-secondary rounded-s" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
+        <div class="panel panel-default card-view">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">browser stats</h6>
                 </div>
-            </form>
+                <div class="pull-right">
+                    <a href="#" class="pull-left inline-block mr-15">
+                        <i class="zmdi zmdi-download"></i>
+                    </a>
+                    <a href="#" class="pull-left inline-block">
+                        <i class="zmdi zmdi-close"></i>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div>
+                        <span class="pull-left inline-block capitalize-font txt-dark">
+                            google chrome
+                        </span>
+                        <span class="label label-warning pull-right">50%</span>
+                        <div class="clearfix"></div>
+                        <hr class="light-grey-hr row mt-10 mb-10" />
+                        <span class="pull-left inline-block capitalize-font txt-dark">
+                            mozila firefox
+                        </span>
+                        <span class="label label-danger pull-right">10%</span>
+                        <div class="clearfix"></div>
+                        <hr class="light-grey-hr row mt-10 mb-10" />
+                        <span class="pull-left inline-block capitalize-font txt-dark">
+                            Internet explorer
+                        </span>
+                        <span class="label label-success pull-right">30%</span>
+                        <div class="clearfix"></div>
+                        <hr class="light-grey-hr row mt-10 mb-10" />
+                        <span class="pull-left inline-block capitalize-font txt-dark">
+                            sfari
+                        </span>
+                        <span class="label label-primary pull-right">10%</span>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card items">
-        <ul class="item-list striped">
-            <li class="item item-list-header">
-                <div class="item-row">
-                    <div class="item-col fixed item-col-check">
-                        <label class="item-check" id="select-all-items">
-                            <input type="checkbox" class="checkbox">
-                            <span></span>
-                        </label>
-                    </div>
-                    <div class="item-col item-col-header fixed item-col-img md">
-                        <div>
-                            <span>Media</span>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-header item-col-title">
-                        <div>
-                            <span>Name</span>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-header item-col-sales">
-                        <div>
-                            <span>Sales</span>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-header item-col-stats">
-                        <div class="no-overflow">
-                            <span>Stats</span>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-header item-col-category">
-                        <div class="no-overflow">
-                            <span>Category</span>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-header item-col-author">
-                        <div class="no-overflow">
-                            <span>Author</span>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-header item-col-date">
-                        <div>
-                            <span>Published</span>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-header fixed item-col-actions-dropdown"> </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-row">
-                    <div class="item-col fixed item-col-check">
-                        <label class="item-check" id="select-all-items">
-                            <input type="checkbox" class="checkbox">
-                            <span></span>
-                        </label>
-                    </div>
-                    <div class="item-col fixed item-col-img md">
-                        <a href="item-editor.html">
-                            <div class="item-img rounded" style="background-image: url(../../s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg)"></div>
-                        </a>
-                    </div>
-                    <div class="item-col fixed pull-left item-col-title">
-                        <div class="item-heading">Name</div>
-                        <div>
-                            <a href="item-editor.html" class="">
-                                <h4 class="item-title"> 12 Myths Uncovered About IT &amp; Software </h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-sales">
-                        <div class="item-heading">Sales</div>
-                        <div> 46323 </div>
-                    </div>
-                    <div class="item-col item-col-stats no-overflow">
-                        <div class="item-heading">Stats</div>
-                        <div class="no-overflow">
-                            <div class="item-stats sparkline" data-type="bar"></div>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-category no-overflow">
-                        <div class="item-heading">Category</div>
-                        <div class="no-overflow">
-                            <a href="#">Software</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-author">
-                        <div class="item-heading">Author</div>
-                        <div class="no-overflow">
-                            <a href="#">Meadow Katheryne</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-date">
-                        <div class="item-heading">Published</div>
-                        <div class="no-overflow"> 21 SEP 10:45 </div>
-                    </div>
-                    <div class="item-col fixed item-col-actions-dropdown">
-                        <div class="item-actions-dropdown">
-                            <a class="item-actions-toggle-btn">
-                                <span class="inactive">
-                                    <i class="fa fa-cog"></i>
-                                </span>
-                                <span class="active">
-                                    <i class="fa fa-chevron-circle-right"></i>
-                                </span>
-                            </a>
-                            <div class="item-actions-block">
-                                <ul class="item-actions-list">
-                                    <li>
-                                        <a class="remove" href="#" data-toggle="modal" data-target="#confirm-modal">
-                                            <i class="fa fa-trash-o "></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="edit" href="item-editor.html">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-row">
-                    <div class="item-col fixed item-col-check">
-                        <label class="item-check" id="select-all-items">
-                            <input type="checkbox" class="checkbox">
-                            <span></span>
-                        </label>
-                    </div>
-                    <div class="item-col fixed item-col-img md">
-                        <a href="item-editor.html">
-                            <div class="item-img rounded" style="background-image: url(../../s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg)"></div>
-                        </a>
-                    </div>
-                    <div class="item-col fixed pull-left item-col-title">
-                        <div class="item-heading">Name</div>
-                        <div>
-                            <a href="item-editor.html" class="">
-                                <h4 class="item-title"> 50% of things doesn&#x27;t really belongs to you </h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-sales">
-                        <div class="item-heading">Sales</div>
-                        <div> 4567 </div>
-                    </div>
-                    <div class="item-col item-col-stats no-overflow">
-                        <div class="item-heading">Stats</div>
-                        <div class="no-overflow">
-                            <div class="item-stats sparkline" data-type="bar"></div>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-category no-overflow">
-                        <div class="item-heading">Category</div>
-                        <div class="no-overflow">
-                            <a href="#">Hardware</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-author">
-                        <div class="item-heading">Author</div>
-                        <div class="no-overflow">
-                            <a href="#">Alexander Sargssyan</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-date">
-                        <div class="item-heading">Published</div>
-                        <div class="no-overflow"> 21 SEP 10:45 </div>
-                    </div>
-                    <div class="item-col fixed item-col-actions-dropdown">
-                        <div class="item-actions-dropdown">
-                            <a class="item-actions-toggle-btn">
-                                <span class="inactive">
-                                    <i class="fa fa-cog"></i>
-                                </span>
-                                <span class="active">
-                                    <i class="fa fa-chevron-circle-right"></i>
-                                </span>
-                            </a>
-                            <div class="item-actions-block">
-                                <ul class="item-actions-list">
-                                    <li>
-                                        <a class="remove" href="#" data-toggle="modal" data-target="#confirm-modal">
-                                            <i class="fa fa-trash-o "></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="edit" href="item-editor.html">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-row">
-                    <div class="item-col fixed item-col-check">
-                        <label class="item-check" id="select-all-items">
-                            <input type="checkbox" class="checkbox">
-                            <span></span>
-                        </label>
-                    </div>
-                    <div class="item-col fixed item-col-img md">
-                        <a href="item-editor.html">
-                            <div class="item-img rounded" style="background-image: url(../../s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg)"></div>
-                        </a>
-                    </div>
-                    <div class="item-col fixed pull-left item-col-title">
-                        <div class="item-heading">Name</div>
-                        <div>
-                            <a href="item-editor.html" class="">
-                                <h4 class="item-title"> Vestibulum tincidunt amet laoreet mauris sit sem aliquam cras maecenas vel aliquam. </h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-sales">
-                        <div class="item-heading">Sales</div>
-                        <div> 854 </div>
-                    </div>
-                    <div class="item-col item-col-stats no-overflow">
-                        <div class="item-heading">Stats</div>
-                        <div class="no-overflow">
-                            <div class="item-stats sparkline" data-type="bar"></div>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-category no-overflow">
-                        <div class="item-heading">Category</div>
-                        <div class="no-overflow">
-                            <a href="#">Anywhere</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-author">
-                        <div class="item-heading">Author</div>
-                        <div class="no-overflow">
-                            <a href="#">Some Long Author Name</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-date">
-                        <div class="item-heading">Published</div>
-                        <div class="no-overflow"> 21 SEP 10:45 </div>
-                    </div>
-                    <div class="item-col fixed item-col-actions-dropdown">
-                        <div class="item-actions-dropdown">
-                            <a class="item-actions-toggle-btn">
-                                <span class="inactive">
-                                    <i class="fa fa-cog"></i>
-                                </span>
-                                <span class="active">
-                                    <i class="fa fa-chevron-circle-right"></i>
-                                </span>
-                            </a>
-                            <div class="item-actions-block">
-                                <ul class="item-actions-list">
-                                    <li>
-                                        <a class="remove" href="#" data-toggle="modal" data-target="#confirm-modal">
-                                            <i class="fa fa-trash-o "></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="edit" href="item-editor.html">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-row">
-                    <div class="item-col fixed item-col-check">
-                        <label class="item-check" id="select-all-items">
-                            <input type="checkbox" class="checkbox">
-                            <span></span>
-                        </label>
-                    </div>
-                    <div class="item-col fixed item-col-img md">
-                        <a href="item-editor.html">
-                            <div class="item-img rounded" style="background-image: url(../../s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg)"></div>
-                        </a>
-                    </div>
-                    <div class="item-col fixed pull-left item-col-title">
-                        <div class="item-heading">Name</div>
-                        <div>
-                            <a href="item-editor.html" class="">
-                                <h4 class="item-title"> Lorem Ipsum is not simply random text </h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-sales">
-                        <div class="item-heading">Sales</div>
-                        <div> 1861 </div>
-                    </div>
-                    <div class="item-col item-col-stats no-overflow">
-                        <div class="item-heading">Stats</div>
-                        <div class="no-overflow">
-                            <div class="item-stats sparkline" data-type="bar"></div>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-category no-overflow">
-                        <div class="item-heading">Category</div>
-                        <div class="no-overflow">
-                            <a href="#">Something</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-author">
-                        <div class="item-heading">Author</div>
-                        <div class="no-overflow">
-                            <a href="#">Willard Bennett</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-date">
-                        <div class="item-heading">Published</div>
-                        <div class="no-overflow"> 21 SEP 10:45 </div>
-                    </div>
-                    <div class="item-col fixed item-col-actions-dropdown">
-                        <div class="item-actions-dropdown">
-                            <a class="item-actions-toggle-btn">
-                                <span class="inactive">
-                                    <i class="fa fa-cog"></i>
-                                </span>
-                                <span class="active">
-                                    <i class="fa fa-chevron-circle-right"></i>
-                                </span>
-                            </a>
-                            <div class="item-actions-block">
-                                <ul class="item-actions-list">
-                                    <li>
-                                        <a class="remove" href="#" data-toggle="modal" data-target="#confirm-modal">
-                                            <i class="fa fa-trash-o "></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="edit" href="item-editor.html">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-row">
-                    <div class="item-col fixed item-col-check">
-                        <label class="item-check" id="select-all-items">
-                            <input type="checkbox" class="checkbox">
-                            <span></span>
-                        </label>
-                    </div>
-                    <div class="item-col fixed item-col-img md">
-                        <a href="item-editor.html">
-                            <div class="item-img rounded" style="background-image: url(../../s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg)"></div>
-                        </a>
-                    </div>
-                    <div class="item-col fixed pull-left item-col-title">
-                        <div class="item-heading">Name</div>
-                        <div>
-                            <a href="item-editor.html" class="">
-                                <h4 class="item-title"> Ut dui quis amet curabitur vestibulum </h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-sales">
-                        <div class="item-heading">Sales</div>
-                        <div> 7891 </div>
-                    </div>
-                    <div class="item-col item-col-stats no-overflow">
-                        <div class="item-heading">Stats</div>
-                        <div class="no-overflow">
-                            <div class="item-stats sparkline" data-type="bar"></div>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-category no-overflow">
-                        <div class="item-heading">Category</div>
-                        <div class="no-overflow">
-                            <a href="#">Something Else</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-author">
-                        <div class="item-heading">Author</div>
-                        <div class="no-overflow">
-                            <a href="#">Ivy Lorrie</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-date">
-                        <div class="item-heading">Published</div>
-                        <div class="no-overflow"> 21 SEP 10:45 </div>
-                    </div>
-                    <div class="item-col fixed item-col-actions-dropdown">
-                        <div class="item-actions-dropdown">
-                            <a class="item-actions-toggle-btn">
-                                <span class="inactive">
-                                    <i class="fa fa-cog"></i>
-                                </span>
-                                <span class="active">
-                                    <i class="fa fa-chevron-circle-right"></i>
-                                </span>
-                            </a>
-                            <div class="item-actions-block">
-                                <ul class="item-actions-list">
-                                    <li>
-                                        <a class="remove" href="#" data-toggle="modal" data-target="#confirm-modal">
-                                            <i class="fa fa-trash-o "></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="edit" href="item-editor.html">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-row">
-                    <div class="item-col fixed item-col-check">
-                        <label class="item-check" id="select-all-items">
-                            <input type="checkbox" class="checkbox">
-                            <span></span>
-                        </label>
-                    </div>
-                    <div class="item-col fixed item-col-img md">
-                        <a href="item-editor.html">
-                            <div class="item-img rounded" style="background-image: url(../../s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg)"></div>
-                        </a>
-                    </div>
-                    <div class="item-col fixed pull-left item-col-title">
-                        <div class="item-heading">Name</div>
-                        <div>
-                            <a href="item-editor.html" class="">
-                                <h4 class="item-title"> Mus sociosqu etiam autem rutrum at molestie elit pulvinar </h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-sales">
-                        <div class="item-heading">Sales</div>
-                        <div> 95150 </div>
-                    </div>
-                    <div class="item-col item-col-stats no-overflow">
-                        <div class="item-heading">Stats</div>
-                        <div class="no-overflow">
-                            <div class="item-stats sparkline" data-type="bar"></div>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-category no-overflow">
-                        <div class="item-heading">Category</div>
-                        <div class="no-overflow">
-                            <a href="#">Other</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-author">
-                        <div class="item-heading">Author</div>
-                        <div class="no-overflow">
-                            <a href="#">Evander Archie</a>
-                        </div>
-                    </div>
-                    <div class="item-col item-col-date">
-                        <div class="item-heading">Published</div>
-                        <div class="no-overflow"> 21 SEP 10:45 </div>
-                    </div>
-                    <div class="item-col fixed item-col-actions-dropdown">
-                        <div class="item-actions-dropdown">
-                            <a class="item-actions-toggle-btn">
-                                <span class="inactive">
-                                    <i class="fa fa-cog"></i>
-                                </span>
-                                <span class="active">
-                                    <i class="fa fa-chevron-circle-right"></i>
-                                </span>
-                            </a>
-                            <div class="item-actions-block">
-                                <ul class="item-actions-list">
-                                    <li>
-                                        <a class="remove" href="#" data-toggle="modal" data-target="#confirm-modal">
-                                            <i class="fa fa-trash-o "></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="edit" href="item-editor.html">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <nav class="text-right">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#"> Prev </a>
-            </li>
-            <li class="page-item active">
-                <a class="page-link" href="#"> 1 </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#"> 2 </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#"> 3 </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#"> 4 </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#"> 5 </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#"> Next </a>
-            </li>
-        </ul>
-    </nav>
-</article>
-<footer class="footer">
-    <div class="footer-block buttons">
-        <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&amp;repo=modular-admin-html&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe>
-    </div>
-    <div class="footer-block author">
-        <ul>
-            <li>
-                created by
-                <a href="https://github.com/modularcode">ModularCode</a>
-            </li>
-            <li>
-                <a href="https://github.com/modularcode/modular-admin-html#get-in-touch">get in touch</a>
-            </li>
-        </ul>
-    </div>
-</footer>
-<div class="modal fade" id="modal-media">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Media Library</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="panel panel-default card-view panel-refresh">
+            <div class="refresh-container">
+                <div class="la-anim-1"></div>
             </div>
-            <div class="modal-body modal-tab-container">
-                <ul class="nav nav-tabs modal-tabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery" data-toggle="tab" role="tab">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#upload" data-toggle="tab" role="tab">Upload</a>
-                    </li>
-                </ul>
-                <div class="tab-content modal-tab-content">
-                    <div class="tab-pane fade" id="gallery" role="tabpanel">
-                        <div class="images-container">
-                            <div class="row"> </div>
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">Visit by Traffic Types</h6>
+                </div>
+                <div class="pull-right">
+                    <a href="#" class="pull-left inline-block refresh mr-15">
+                        <i class="zmdi zmdi-replay"></i>
+                    </a>
+                    <div class="pull-left inline-block dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert"></i></a>
+                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>option 1</a></li>
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>option 2</a></li>
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>option 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div>
+                        <canvas id="chart_6" height="191"></canvas>
+                    </div>
+                    <hr class="light-grey-hr row mt-10 mb-15" />
+                    <div class="label-chatrs">
+                        <div class="">
+                            <span class="clabels clabels-lg inline-block bg-blue mr-10 pull-left"></span>
+                            <span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">44.46% organic</span><span class="block txt-grey">356 visits</span></span>
+                            <div id="sparkline_1" class="pull-right" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
-                    <div class="tab-pane fade active in" id="upload" role="tabpanel">
-                        <div class="upload-container">
-                            <div id="dropzone">
-                                <form action="https://modularcode.io/" method="POST" enctype="multipart/form-data" class="dropzone needsclick dz-clickable" id="demo-upload">
-                                    <div class="dz-message-block">
-                                        <div class="dz-message needsclick"> Drop files here or click to upload. </div>
+                    <hr class="light-grey-hr row mt-10 mb-15" />
+                    <div class="label-chatrs">
+                        <div class="">
+                            <span class="clabels clabels-lg inline-block bg-green mr-10 pull-left"></span>
+                            <span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">5.54% Refrral</span><span class="block txt-grey">36 visits</span></span>
+                            <div id="sparkline_2" class="pull-right" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <hr class="light-grey-hr row mt-10 mb-15" />
+                    <div class="label-chatrs">
+                        <div class="">
+                            <span class="clabels clabels-lg inline-block bg-yellow mr-10 pull-left"></span>
+                            <span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">50% Refrral</span><span class="block txt-grey">36 visits</span></span>
+                            <div id="sparkline_3" class="pull-right" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="panel panel-default card-view panel-refresh">
+            <div class="refresh-container">
+                <div class="la-anim-1"></div>
+            </div>
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">Audience location</h6>
+                </div>
+                <div class="pull-right">
+                    <a href="#" class="pull-left inline-block refresh mr-15">
+                        <i class="zmdi zmdi-replay"></i>
+                    </a>
+                    <div class="pull-left inline-block dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert"></i></a>
+                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>option 1</a></li>
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>option 2</a></li>
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>option 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div id="world_map_marker_1" style="height: 378px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Row -->
+<!-- Row -->
+<div class="row">
+    <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="panel panel-default card-view pt-0">
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body pa-0">
+                    <div class="sm-data-box bg-white">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6 text-left pl-0 pr-0 data-wrap-left">
+                                    <span class="txt-dark block counter">$<span class="counter-anim">15,678</span></span>
+                                    <span class="block"><span class="weight-500 uppercase-font txt-grey font-13">growth</span><i class="zmdi zmdi-caret-down txt-danger font-21 ml-5 vertical-align-middle"></i></span>
+                                </div>
+                                <div class="col-xs-6 text-left  pl-0 pr-0 pt-25 data-wrap-right">
+                                    <div id="sparkline_4" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default card-view pt-0">
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body pa-0">
+                    <div class="sm-data-box bg-white">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6 text-left pl-0 pr-0 data-wrap-left">
+                                    <span class="txt-dark block counter"><span class="counter-anim">46.41</span>%</span>
+                                    <span class="block"><span class="weight-500 uppercase-font txt-grey font-13">population</span><i class="zmdi zmdi-caret-up txt-success font-21 ml-5 vertical-align-middle"></i></span>
+                                </div>
+                                <div class="col-xs-6 text-left  pl-0 pr-0 pt-25 data-wrap-right">
+                                    <div id="sparkline_5" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel card-view">
+            <div class="panel-heading small-panel-heading relative">
+                <div class="pull-left">
+                    <h6 class="panel-title">Invoices</h6>
+                </div>
+                <div class="clearfix"></div>
+                <div class="head-overlay"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body row pa-0">
+                    <div class="sm-data-box">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                    <span class="weight-500 uppercase-font block">due</span>
+                                    <span class="txt-dark block counter">$<span class="counter-anim">15678</span></span>
+                                </div>
+                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                    <span class="weight-500 uppercase-font  block">overdue</span>
+                                    <span class="txt-dark block counter">$<span class="counter-anim">45678</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel card-view">
+            <div class="panel-heading small-panel-heading relative">
+                <div class="pull-left">
+                    <h6 class="panel-title">Monthly Revenue</h6>
+                </div>
+                <div class="clearfix"></div>
+                <div class="head-overlay"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body row pa-0">
+                    <div class="sm-data-box">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                    <span class="block"><i class="zmdi zmdi-trending-up txt-warning font-18 mr-5"></i><span class="weight-500 uppercase-font">growth</span></span>
+                                    <span class="txt-dark block counter">$<span class="counter-anim">15,678</span></span>
+                                </div>
+                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                    <div id="sparkline_6" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 col-md-6 col-xs-12">
+        <div class="panel panel-default card-view panel-refresh">
+            <div class="refresh-container">
+                <div class="la-anim-1"></div>
+            </div>
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">top 5 products</h6>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body row">
+                    <div class="col-sm-6 pa-0">
+                        <canvas id="chart_7" height="164"></canvas>
+                    </div>
+                    <div class="col-sm-6 pr-0 pt-25">
+                        <div class="label-chatrs">
+                            <div class="mb-5">
+                                <span class="clabels inline-block bg-yellow mr-5"></span>
+                                <span class="clabels-text font-12 inline-block txt-dark capitalize-font">Paleo Bars</span>
+                            </div>
+                            <div class="mb-5">
+                                <span class="clabels inline-block bg-pink mr-5"></span>
+                                <span class="clabels-text font-12 inline-block txt-dark capitalize-font">Bow Ties</span>
+                            </div>
+                            <div class="mb-5">
+                                <span class="clabels inline-block bg-blue mr-5"></span>
+                                <span class="clabels-text font-12 inline-block txt-dark capitalize-font">Pocket Squares</span>
+                            </div>
+                            <div class="mb-5">
+                                <span class="clabels inline-block bg-red mr-5"></span>
+                                <span class="clabels-text font-12 inline-block txt-dark capitalize-font">Wood Sunglasses</span>
+                            </div>
+                            <div class="">
+                                <span class="clabels inline-block bg-green mr-5"></span>
+                                <span class="clabels-text font-12 inline-block txt-dark capitalize-font">Leggings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default card-view sm-data-box-3">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">conversion rate</h6>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="col-sm-6 pa-0">
+                        <span id="pie_chart_4" class="easypiechart" data-percent="33">
+                            <span class="percent block txt-dark weight-500"></span>
+                            <span class="block txt-success text-center">
+                                <i class="zmdi zmdi-caret-up pr-5 font-20"></i><span class="weight-500">+33%</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col-sm-6 pr-0">
+                        <ul class="flex-stat mb-15">
+                            <li class="text-left block no-float full-width mb-15">
+                                <span class="block">Cart Abandonment</span>
+                                <span class="block txt-dark weight-500  font-18"><span class="counter-anim">73</span>%</span>
+                                <span class="block txt-success pull-left mt-5">
+                                    <i class="zmdi zmdi-caret-up pr-5 font-20 pull-left"></i><span class="weight-500 pull-left">+15%</span>
+                                </span>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="text-left block no-float full-width">
+                                <span class="block">Revenue Left</span>
+                                <span class="block txt-dark weight-500  font-18">$<span class="counter-anim">12,432</span></span>
+                                <span class="block txt-success pull-left mt-5">
+                                    <i class="zmdi zmdi-caret-up pr-5 font-20 pull-left"></i><span class="weight-500 pull-left">+4%</span>
+                                </span>
+                                <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12 col-xs-12">
+        <div class="panel panel-default card-view  pa-0">
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body  pa-0">
+                    <div class="profile-box">
+                        <div class="profile-cover-pic">
+                            <div class="fileupload btn btn-default">
+                                <span class="btn-text">edit</span>
+                                <input class="upload" type="file">
+                            </div>
+                            <div class="profile-image-overlay"></div>
+                        </div>
+                        <div class="profile-info text-center">
+                            <div class="profile-img-wrap">
+                                <img class="inline-block mb-10" src="../img/mock1.jpg" alt="user" />
+                                <div class="fileupload btn btn-default">
+                                    <span class="btn-text">edit</span>
+                                    <input class="upload" type="file">
+                                </div>
+                            </div>
+                            <h5 class="block mt-10 mb-5 weight-500 capitalize-font txt-danger">Madalyn Rascon</h5>
+                            <h6 class="block capitalize-font pb-20">Developer Geek</h6>
+                        </div>
+                        <div class="social-info">
+                            <div class="row">
+                                <div class="col-xs-4 text-center">
+                                    <span class="counts block head-font"><span class="counter-anim">345</span></span>
+                                    <span class="counts-text block">post</span>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <span class="counts block head-font"><span class="counter-anim">246</span></span>
+                                    <span class="counts-text block">followers</span>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <span class="counts block head-font"><span class="counter-anim">898</span></span>
+                                    <span class="counts-text block">tweets</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-default btn-block btn-outline btn-anim mt-30" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i><span class="btn-text">edit profile</span></button>
+                            <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h5 class="modal-title" id="myModalLabel">Edit Profile</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Row -->
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="">
+                                                        <div class="panel-wrapper collapse in">
+                                                            <div class="panel-body pa-0">
+                                                                <div class="col-sm-12 col-xs-12">
+                                                                    <div class="form-wrap">
+                                                                        <form action="#">
+                                                                            <div class="form-body overflow-hide">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label mb-10" for="exampleInputuname_1">Name</label>
+                                                                                    <div class="input-group">
+                                                                                        <div class="input-group-addon"><i class="icon-user"></i></div>
+                                                                                        <input type="text" class="form-control" id="exampleInputuname_1" placeholder="willard bryant">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label mb-10" for="exampleInputEmail_1">Email address</label>
+                                                                                    <div class="input-group">
+                                                                                        <div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+                                                                                        <input type="email" class="form-control" id="exampleInputEmail_1" placeholder="xyz@gmail.com">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label mb-10" for="exampleInputContact_1">Contact number</label>
+                                                                                    <div class="input-group">
+                                                                                        <div class="input-group-addon"><i class="icon-phone"></i></div>
+                                                                                        <input type="email" class="form-control" id="exampleInputContact_1" placeholder="+102 9388333">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label mb-10" for="exampleInputpwd_1">Password</label>
+                                                                                    <div class="input-group">
+                                                                                        <div class="input-group-addon"><i class="icon-lock"></i></div>
+                                                                                        <input type="password" class="form-control" id="exampleInputpwd_1" placeholder="Enter pwd" value="password">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label mb-10">Gender</label>
+                                                                                    <div>
+                                                                                        <div class="radio">
+                                                                                            <input type="radio" name="radio1" id="radio_1" value="option1" checked="">
+                                                                                            <label for="radio_1">
+                                                                                                M
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="radio">
+                                                                                            <input type="radio" name="radio1" id="radio_2" value="option2">
+                                                                                            <label for="radio_2">
+                                                                                                F
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label mb-10">Country</label>
+                                                                                    <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
+                                                                                        <option value="Category 1">USA</option>
+                                                                                        <option value="Category 2">Austrailia</option>
+                                                                                        <option value="Category 3">India</option>
+                                                                                        <option value="Category 4">UK</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-actions mt-10">
+                                                                                <button type="submit" class="btn btn-success mr-10 mb-30">Update profile</button>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success waves-effect" data-dismiss="modal">Save</button>
+                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                        </div>
                                     </div>
-                                </form>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Insert Selected</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-<div class="modal fade" id="confirm-modal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">
-                    <i class="fa fa-warning"></i> Alert
-                </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Are you sure want to do this?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
         </div>
     </div>
-<!-- Reference block for JS -->
-<div class="ref" id="ref">
-    <div class="color-primary"></div>
-    <div class="chart">
-        <div class="color-primary"></div>
-        <div class="color-secondary"></div>
-    </div>
 </div>
-@await Html.PartialAsync("_LayoutFooter")
+<!-- Row -->
+<script src="~/js/widgets-data.js"></script>
