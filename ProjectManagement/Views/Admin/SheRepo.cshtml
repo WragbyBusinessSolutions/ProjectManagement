@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="row">
+
+    <div class="col-sm-12">
+
+      <div>
+        <h5>Document Library</h5>
+        @*<a class="btn btn-primary" asp-controller="Project" asp-action="AddProject"> Add New </a>*@
+      </div>
+      <br />
+
+        <div class="panel panel-default card-view">
+            <div class="panel-wrapper collapse in">
+
+                <div class="panel-body">
+
+                    <div class="table-wrap">
+                        <div class="table-responsive">
+                            <table id="example" class="table table-hover display  pb-30">
+                                <thead>
+                                  <tr>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Published</th>
+                                    <th>Memo ID</th>
+                                    <th></th>
+                                    
+                                  </tr>
+                                </thead>
+                                <tfoot>
+                                  <tr>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Published</th>
+                                    <th>Memo ID</th>
+                                    <th></th>
+
+                                  </tr>
+                                </tfoot>
+                                <tbody>
+                                  <tr>
+                                    <td>Laying Of Pipes</td>
+                                    <td>Internal Memo</td>
+                                    <td>22-6-19</td>
+                                    <td>ASP63GB</td>
+
+                                    <td><button class="btn btn-primary">View Details</button></td>
+
+                                  </tr>
+                                  <tr>
+                                    <td>Transportation Of Crude</td>
+                                    <td>Approval</td>
+                                    <td>27-5-19</td>
+                                    <td>ASP63GB</td>
+
+                                    <td><button class="btn btn-primary">View Details</button></td>
+
+                                  </tr>
+                                  <tr>
+                                    <td>Maintenance of Vessels</td>
+                                    <td>Approval</td>
+                                    <td>23-06-19</td>
+                                    <td>ASP37FB</td>
+                                    <td><button class="btn btn-primary">View Details</button></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Renovations and Repairs</td>
+                                    <td>Internal Memo</td>
+                                    <td>31-05-19</td>
+                                    <td>ASP28FB</td>
+                                    <td><button class="btn btn-primary">View Details</button></td>
+                                  </tr>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Row -->

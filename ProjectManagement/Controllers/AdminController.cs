@@ -62,5 +62,26 @@ namespace ProjectManagement.Controllers
         {
             return View();
         }
+
+    public IActionResult UpstreamRepo()
+    {
+      return View();
     }
+
+    public IActionResult DownstreamRepo()
+    {
+      return View();
+    }
+
+    public IActionResult SheRepo()
+    {
+      return View();
+    }
+
+    public IActionResult ProcurementRepo()
+    {
+      return View();
+    }
+
+  }
 }
