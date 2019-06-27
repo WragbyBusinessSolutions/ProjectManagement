@@ -1,67 +1,345 @@
-﻿@model  Project
-
-@{
-    ViewData["Title"] = "AddProject";
+﻿@{
+    ViewData["Title"] = "Add Internal Project";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
+<!-- Row -->
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ProjectName" class="control-label"></label>
-                <input asp-for="ProjectName" class="form-control" />
-                <span asp-validation-for="ProjectName" class="text-danger"></span>
+    <div class="col-md-6">
+        <div class="panel panel-default card-view">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h3 class="txt-dark">Create New Project</h3>
+                    <h6 class="panel-title txt-dark">basic Project Details</h6>
+                </div>
+                <div class="clearfix"></div>
             </div>
-            <div class="form-group">
-                <label asp-for="PublishedDate" class="control-label"></label>
-                <input asp-for="PublishedDate" class="form-control" />
-                <span asp-validation-for="PublishedDate" class="text-danger"></span>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <div class="form-wrap">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputuname_1">Name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="icon-user"></i></div>
+                                            <input type="text" class="form-control" id="exampleInputuname_1" placeholder="Username">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputEmail_1">Category</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+                                            <input type="email" class="form-control" id="exampleInputEmail_1" placeholder="Enter email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputpwd_1">Project ID</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="icon-lock"></i></div>
+                                            <input type="password" class="form-control" id="exampleInputpwd_1" placeholder="Enter email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputpwd_2">Division Assigned to</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="icon-lock"></i></div>
+                                            <select class="form-control">
+                                                <option> -- Select Poject Division --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputpwd_2">project Document</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="icon-lock"></i></div>
+                                            <input type="file" class="form-control" id="exampleInputpwd_2" placeholder="Upload Document">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputpwd_2">Project Sponsor</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="icon-lock"></i></div>
+                                            <input type="text" class="form-control" id="exampleInputpwd_2" placeholder="Project sponsor">
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ProjectId" class="control-label"></label>
-                <input asp-for="ProjectId" class="form-control" />
-                <span asp-validation-for="ProjectId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default card-view">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h3 class=" txt-dark">Project Implementation Methodology Details & Revenue</h3>
+                    <h6 class="panel-title txt-dark">basic Project Details</h6>
+                </div>
+                <div class="clearfix"></div>
             </div>
-            <div class="form-group">
-                <label asp-for="ProjectCost" class="control-label"></label>
-                <input asp-for="ProjectCost" class="form-control" />
-                <span asp-validation-for="ProjectCost" class="text-danger"></span>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <div class="form-wrap">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputuname_2">Project Methodology</label>
+                                        <div class="input-group">
+                                            <select type="text" class="form-control" id="exampleInputuname_2" placeholder="Username">
+                                                <option selected>-- Choose your project methodology --</option>
+                                                <option>Agile</option>
+                                                <option>Scrum</option>
+                                                <option>Kanban</option>
+                                                <option>Waterfall</option>
+                                                <option>Lean</option>
+                                                <option>Six Sigma</option>
+                                                <option>PMI/PMOBOK</option>
+                                            </select>
+                                            <div class="input-group-addon"><i class="icon-user"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-heading">
+                                        <div class="pull-left">
+                                            <h5 class="panel-title txt-dark">Project Revenue Details</h5>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputpwd_3">Total Project Cost</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="exampleInputpwd_2" placeholder="Project cost">
+                                            <div class="input-group-addon"><i class="icon-lock"></i></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @*<label class="control-label mb-10" for="exampleInputpwd_42">Project Phase Revnue Share %</label>*@
+                                        <div id="education_fields"></div>
+                                        <div class="row">
+                                            @*<div class="col-sm-3 nopadding">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <select type="text" class="form-control" id="exampleInputuname_2" placeholder="Username">
+                                                                <option selected> Project Phase </option>
+                                                                <option>Agile</option>
+                                                                <option>Scrum</option>
+                                                                <option>Kanban</option>
+                                                                <option>Waterfall</option>
+                                                                <option>Lean</option>
+                                                                <option>Six Sigma</option>
+                                                                <option>PMI/PMOBOK</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>*@
+                                            @*<div class="col-sm-3 nopadding">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="Schoolname" name="Schoolname[]" value="" placeholder="Percentage  ">
+                                                    </div>
+                                                </div>*@
+                                            @*<div class="col-sm-3 nopadding">
+                                                    <div class="form-group">
+                                                        <button class="btn btn-success" type="button" onclick="education_fields();"><i class="fa fa-plus"></i></button>
+                                                    </div>
+                                                </div>*@
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <table id="tblPhases" class="table" cellpadding="0" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <td>Project Phase</td>
+                                                <td>Percentage</td>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td><input type="text" class="form-control" placeholder="Phase" id="txtName" /></td>
+                                                <td><input type="text" id="txtPerc" class="form-control" placeholder="%" /></td>
+
+                                                <td> <a class="btn btn-success" id="btnAdd"><i class="fa fa-plus"></i></a></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+
+
+
+
+
+
+
+
+
+                                    <div class="form-group">
+                                        <label class="control-label mb-10" for="exampleInputpwd_42">Project Phase Revnue Share %</label>
+                                        <div id="education_fields"></div>
+                                        <div class="row">
+                                            <div class="col-sm-3 nopadding">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" id="Schoolname" name="Schoolname[]" value="" placeholder=" Start Date">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-sm-3 nopadding">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="Schoolname" name="Schoolname[]" value="" placeholder="End Date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-0">
+                                        <a asp-action="InternalProjects" class="btn btn-success  mr-10">Submit</a>
+                                        <button type="submit" class="btn btn-default  ">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="DocumentLink" class="control-label"></label>
-                <input asp-for="DocumentLink" class="form-control" />
-                <span asp-validation-for="DocumentLink" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DateUpdated" class="control-label"></label>
-                <input asp-for="DateUpdated" class="form-control" />
-                <span asp-validation-for="DateUpdated" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Division" class="control-label"></label>
-                <select asp-for="Division" class="form-control"></select>
-                <span asp-validation-for="Division" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                <select asp-for="Category" class="form-control"></select>
-                <span asp-validation-for="Category" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <select asp-for="Status" class="form-control"></select>
-                <span asp-validation-for="Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
+<!-- /Row -->
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+@await Html.PartialAsync("_LayoutFooter")
+
+
+
+
+
+<script type="text/javascript">
+
+    $("body").on("click", "#btnAdd", function () {
+        //Reference the Name and Country TextBoxes.
+        var txtName = $("#txtName");
+        var txtPerc = $("#txtPerc");
+        console.log(txtName.val(), txtPerc.val());
+        //Get the reference of the Table's TBODY element.
+        var tBody = $("#tblPhases > TBODY")[0];
+
+        //Add Row.
+        var row = tBody.insertRow(-1);
+
+        //Add Name cell.
+        var cell = $(row.insertCell(-1));
+        cell.html(txtName.val());
+
+        //Add Country cell.
+        cell = $(row.insertCell(-1));
+        cell.html(txtPerc.val());
+
+
+
+
+
+        //Add Button cell.
+        cell = $(row.insertCell(-1));
+        var btnRemove = $("<a />");
+        btnRemove.attr("class", "btn btn-warning");
+        btnRemove.wrapInner($("<i class='fa-minus'></i>"));
+        btnRemove.attr("onclick", "Remove(this);");
+        btnRemove.val("Remove");
+        cell.append(btnRemove);
+
+        //Clear the TextBoxes.
+        txtName.val("");
+        txtPerc.val("");
+
+
+
+
+
+        var customers = new Array();
+        $("#tblPhases TBODY TR").each(function () {
+            var row = $(this);
+            var customer = {};
+            customer.Name = row.find("TD").eq(0).html();
+            customer.Percent = row.find("TD").eq(1).html();
+            customers.push(customer);
+        });
+
+        console.log(customers);
+
+
+
+
+    });
+
+    function Remove(button) {
+        //Determine the reference of the Row using the Button.
+        var row = $(button).closest("TR");
+        var name = $("TD", row).eq(0).html();
+        //if (confirm("Do you want to delete: " + name)) {
+        //    //Get the reference of the Table.
+        //    var table = $("#tblCustomers")[0];
+
+        //    //Delete the Table row using it's Index.
+        //    table.deleteRow(row[0].rowIndex);
+        //}
+
+        //Get the reference of the Table.
+        var table = $("#tblPhases")[0];
+
+        //Delete the Table row using it's Index.
+        table.deleteRow(row[0].rowIndex);
+    };
+
+
+
+
+
+</script>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

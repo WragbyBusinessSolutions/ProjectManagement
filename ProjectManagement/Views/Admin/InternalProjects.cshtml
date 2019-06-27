@@ -10,10 +10,10 @@
 
     <div class="col-sm-12">
 
-      <div>
-        <a class="btn btn-primary" asp-controller="Admin" asp-action="AddInternalProject"> Add New </a>
-      </div>
-      <br />
+        <div>
+            <a class="btn btn-primary" asp-controller="Admin" asp-action="AddInternalProject"> Add New </a>
+        </div>
+        <br />
 
         <div class="panel panel-default card-view">
             <div class="panel-wrapper collapse in">
@@ -24,99 +24,99 @@
                         <div class="table-responsive">
                             <table id="example" class="table table-hover display  pb-30">
                                 <thead>
-                                  <tr>
-                                    <th>Project Name</th>
-                                    <th>Project Id</th>
-                                    <th>Published</th>
-                                    <th>Project Cost</th>
-                                    <th>Document Link</th>
-                                    @*<th>Date Updated</th>*@
-                                    <th>Division</th>
-                                    <th>Category</th>
-                                    @*<th>Phase</th>*@
-                                    <th>Status</th>
-                                    <th></th>
-                                    <th></th>
-                                  </tr>
+                                    <tr>
+                                        <th>Project Name</th>
+                                        <th>Project Id</th>
+                                        <th>Published</th>
+                                        <th>Project Cost</th>
+                                        <th>Document Link</th>
+                                        @*<th>Date Updated</th>*@
+                                        <th>Division</th>
+                                        <th>Category</th>
+                                        @*<th>Phase</th>*@
+                                        <th>Status</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
                                 </thead>
                                 <tfoot>
-                                  <tr>
-                                    <th>Project Name</th>
-                                    <th>Project Id</th>
-                                    <th>Published</th>
-                                    <th>Project Cost</th>
-                                    <th>Document Link</th>
-                                    @*<th>Date Updated</th>*@
-                                    <th>Division</th>
-                                    <th>Category</th>
-                                    @*<th>Phase</th>*@
-                                    <th>Status</th>
-                                    <th></th>
-                                    <th></th>
+                                    <tr>
+                                        <th>Project Name</th>
+                                        <th>Project Id</th>
+                                        <th>Published</th>
+                                        <th>Project Cost</th>
+                                        <th>Document Link</th>
+                                        @*<th>Date Updated</th>*@
+                                        <th>Division</th>
+                                        <th>Category</th>
+                                        @*<th>Phase</th>*@
+                                        <th>Status</th>
+                                        <th></th>
+                                        <th></th>
 
-                                  </tr>
+                                    </tr>
                                 </tfoot>
                                 <tbody>
-                                  <tr>
-                                    <td>MISTDO Portal Dev.</td>
-                                    <td>ASP63GB</td>
-                                    <td>22-6-19</td>
-                                    <td>22,000,000.00</td>
-                                    <td><a href="#">www.managementportal.com.ng</a></td>
-                                    @*<td>27-6-19</td>*@
-                                    <td>Downstream</td>
-                                    <td>Internal Memo</td>
-                                    @*<td>Planning</td>*@
-                                    <td>Active</td>
-                                    <td><a class="btn btn-primary" asp-action="ViewDetails" asp-controller="Admin" > View Details</a></td>
-                                    <td><button class="btn btn-danger">Delete</button></td>
+                                    <tr>
+                                        <td>MISTDO Portal Dev.</td>
+                                        <td>ASP63GB</td>
+                                        <td>22-6-19</td>
+                                        <td>22,000,000.00</td>
+                                        <td><a href="#">www.managementportal.com.ng</a></td>
+                                        @*<td>27-6-19</td>*@
+                                        <td>Downstream</td>
+                                        <td>Internal Memo</td>
+                                        @*<td>Planning</td>*@
+                                        <td>Active</td>
+                                        <td><a class="btn btn-primary" asp-action="ViewDetails" asp-controller="Admin"> View Details</a></td>
+                                        <td><button class="btn btn-danger">Delete</button></td>
 
-                                  </tr>
-                                  <tr>
-                                    <td>OGISP Portal Dev.</td>
-                                    <td>ASP79FB</td>
-                                    <td>13-11-19</td>
-                                    <td>75,000,000.00</td>
-                                    <td><a href="#">www.ogispmanagementportal.com.ng</a></td>
-                                    @*<td>31-5-19</td>*@
-                                    <td>Downstream</td>
-                                    <td>Internal Memo</td>
-                                    @*<td>Development</td>*@
-                                    <td>Pending</td>
-                                    <td><a class="btn btn-primary" asp-action="ViewDetails" asp-controller="Admin"> View Details</a></td>
-                                    <td><button class="btn btn-danger">Delete</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>OGISP Portal Dev.</td>
+                                        <td>ASP79FB</td>
+                                        <td>13-11-19</td>
+                                        <td>75,000,000.00</td>
+                                        <td><a href="#">www.ogispmanagementportal.com.ng</a></td>
+                                        @*<td>31-5-19</td>*@
+                                        <td>Downstream</td>
+                                        <td>Internal Memo</td>
+                                        @*<td>Development</td>*@
+                                        <td>Pending</td>
+                                        <td><a class="btn btn-primary" asp-action="ViewDetails" asp-controller="Admin"> View Details</a></td>
+                                        <td><button class="btn btn-danger">Delete</button></td>
 
-                                  </tr>
-                                  <tr>
-                                    <td>DBAS Portal Dev.</td>
-                                    <td>ASP37FB</td>
-                                    <td>23-06-19</td>
-                                    <td>100,000,000.00</td>
-                                    <td><a href="#">www.DBASportal.com.ng</a></td>
-                                    @*<td>22-6-19</td>*@
-                                    <td>Upstream</td>
-                                    <td>Approval Memo</td>
-                                    @*<td>Testing</td>*@
-                                    <td>Pending</td>
-                                    <td><a class="btn btn-primary" asp-action="ViewDetails" asp-controller="Admin"> View Details</a></td>
-                                    <td><button class="btn btn-danger">Delete</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DBAS Portal Dev.</td>
+                                        <td>ASP37FB</td>
+                                        <td>23-06-19</td>
+                                        <td>100,000,000.00</td>
+                                        <td><a href="#">www.DBASportal.com.ng</a></td>
+                                        @*<td>22-6-19</td>*@
+                                        <td>Upstream</td>
+                                        <td>Approval Memo</td>
+                                        @*<td>Testing</td>*@
+                                        <td>Pending</td>
+                                        <td><a class="btn btn-primary" asp-action="ViewDetails" asp-controller="Admin"> View Details</a></td>
+                                        <td><button class="btn btn-danger">Delete</button></td>
 
-                                  </tr>
-                                  
-                                  <tr>
-                                    <td>SHE</td>
-                                    <td>ASP89FB</td>
-                                    <td>19-06-19</td>
-                                    <td>27,000,000.00</td>
-                                    <td><a href="#">www.sheportal.com.ng</a></td>
-                                    @*<td>19-12-18</td>*@
-                                    <td>Downstream</td>
-                                    <td>Approval</td>
-                                    @*<td>Planning</td>*@
-                                    <td>Approved</td>
-                                    <td><a class="btn btn-primary" asp-action="ViewDetails" asp-controller="Admin"> View Details</a></td>
-                                    <td><button class="btn btn-danger">Delete</button></td>
-                                  </tr>
+                                    </tr>
+
+                                    <tr>
+                                        <td>SHE</td>
+                                        <td>ASP89FB</td>
+                                        <td>19-06-19</td>
+                                        <td>27,000,000.00</td>
+                                        <td><a href="#">www.sheportal.com.ng</a></td>
+                                        @*<td>19-12-18</td>*@
+                                        <td>Downstream</td>
+                                        <td>Approval</td>
+                                        @*<td>Planning</td>*@
+                                        <td>Approved</td>
+                                        <td><a class="btn btn-primary" asp-action="ViewDetails" asp-controller="Admin"> View Details</a></td>
+                                        <td><button class="btn btn-danger">Delete</button></td>
+                                    </tr>
 
                                 </tbody>
                             </table>
@@ -128,3 +128,21 @@
     </div>
 </div>
 <!-- /Row -->
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
