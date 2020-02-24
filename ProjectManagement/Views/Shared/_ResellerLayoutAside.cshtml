@@ -12,8 +12,8 @@
 
 
 
-        @if ((await AuthorizationService.AuthorizeAsync(User, "Admin")).Succeeded)
-        {
+        @*@if ((await AuthorizationService.AuthorizeAsync(User, "Admin")).Succeeded)
+        {*@
             <li>
                 <a asp-controller="Home" asp-action="Index"><div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
             </li>
@@ -33,7 +33,7 @@
             @*<li>
                 <a asp-controller="Admin" asp-action="Methodology"><div class="pull-left"><i class="zmdi zmdi-collection-folder-image mr-20"></i><span class="right-nav-text">Methodologies</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
             </li>*@
-        }
+        @*}*@
 
         @if ((await AuthorizationService.AuthorizeAsync(User, "PM")).Succeeded)
         {
